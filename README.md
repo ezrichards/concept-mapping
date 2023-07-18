@@ -51,3 +51,4 @@ another topic.
 - Add real-world applications relations (grayed out, but can be toggled for highlight)
 - Dijkstra's or other least-search algorithm: what do you have to understand to understand an entire Feature?
 - Toggleable "Feature" display: toggle whether or not the mapping goes "towards" Features or "away" from Features
+- "Abstraction maps": saveable to png and viewable on web
