@@ -1,0 +1,19 @@
+body {
+    background-color: lightgray;
+}
+
+#network {
+    width: 100%;
+    height: 90vh;
+    border: 1px solid lightgray;
+    background-color: white;
+}
+
+.container {
+    display: flex;
+}
+
+.column {
+    display: block;
+    width: 50%;
+}

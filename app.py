@@ -7,6 +7,10 @@ app = Flask(__name__)
 def home():
     return render_template("index.html")
 
+@app.route("/network/<id>")
+def network(id):
+    return render_template("network.html", name = id)
+
 if __name__ == "__main__":
     app.run("0.0.0.0")
 
