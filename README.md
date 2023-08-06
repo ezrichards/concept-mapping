@@ -43,11 +43,9 @@ is `ofFeature` Conditionals.
 another topic.
 
 ## Roadmap
-- Add graph view support
 - Figure out best RDF storage + query libraries
 - Student end: checkmark certain things that need to be studied, and other things that have been finished.
 - Teacher creation of abstraction predicates (i.e. math theorems)
 - Add real-world applications relations (grayed out, but can be toggled for highlight)
 - Dijkstra's or other least-search algorithm: what do you have to understand to understand an entire Feature?
 - Toggleable "Feature" display: toggle whether or not the mapping goes "towards" Features or "away" from Features
-- "Abstraction maps": saveable to png and viewable on web

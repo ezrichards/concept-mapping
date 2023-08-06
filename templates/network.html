@@ -11,6 +11,9 @@
     <div class="container">
         <div class="column">
             <div id="network"></div>
+            <!-- <button>Save as PNG</button> -->
+            <input type="button" value="Download image" onclick="document.getElementById('canvasImg').click();">
+            <a id="canvasImg" download="filename"></a>
         </div>
 
         <div class="column">
@@ -19,8 +22,7 @@
         </div>
     </div>
 
-    <script type="text/javascript">
-        // create an array with nodes
+    <script>
         var nodes = new vis.DataSet([
             { id: 1, label: "Node 1" },
             { id: 2, label: "Node 2" },
@@ -29,7 +31,6 @@
             { id: 5, label: "Node 5" },
         ]);
 
-        // create an array with edges
         var edges = new vis.DataSet([
             { from: 1, to: 3, label: "Test", font: { align: "top" } },
             { from: 1, to: 2 },
@@ -38,7 +39,6 @@
             { from: 3, to: 3 },
         ]);
 
-        // create a network
         var container = document.getElementById("network");
         var data = {
             nodes: nodes,
@@ -47,7 +47,6 @@
         var options = { layout: { randomSeed: 1 } };
         var network = new vis.Network(container, data, options);
 
-        // listen for events
         network.on("click", function (params) {
             params.event = "[original event]";
             document.getElementById("eventSpanHeading").innerText = "Click event:";
@@ -56,12 +55,12 @@
                 null,
                 4
             );
-            console.log(
-                "click event, getNodeAt returns: " +
-                this.getNodeAt(params.pointer.DOM)
-            );
         });
 
+        network.on("afterDrawing", function(ctx) {
+            var dataURL = ctx.canvas.toDataURL();
+            document.getElementById('canvasImg').href = dataURL;
+        });
     </script>
 </body>
 
