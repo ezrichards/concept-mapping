@@ -57,10 +57,14 @@ def maps(id):
         }
     ]
 
-    # node info dataset? if node id == node info id:
-    # display data on right hand side
+    node_info = [
+        {
+            "id": "1",
+            "info": "This is some test info!"
+        }       
+    ]
 
-    return render_template("maps.html", name = id, nodes = node_data, edges = edge_data)
+    return render_template("maps.html", name = id, nodes = node_data, edges = edge_data, info = node_info)
 
 if __name__ == "__main__":
     app.run("0.0.0.0")

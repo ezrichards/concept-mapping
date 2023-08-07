@@ -16,7 +16,6 @@
         </div>
 
         <div class="column">
-            <h2 id="eventSpanHeading"></h2>
             <pre id="eventSpanContent"></pre>
         </div>
     </div>
@@ -24,17 +23,17 @@
     <script>
         let nodes = new vis.DataSet(JSON.parse('{{nodes | tojson}}'));
         let edges = new vis.DataSet(JSON.parse('{{edges | tojson}}'));
+        
+        let nodeInfo = JSON.parse('{{info | tojson}}');
+        console.log(nodeInfo);
+
         let container = document.getElementById("network");
-        let data = {
-            nodes: nodes,
-            edges: edges,
-        };
+        let data = { nodes: nodes, edges: edges };
         let options = { layout: { randomSeed: 1 } };
         let network = new vis.Network(container, data, options);
 
         network.on("click", function (params) {
             params.event = "[original event]";
-            document.getElementById("eventSpanHeading").innerText = "Click event:";
             document.getElementById("eventSpanContent").innerText = JSON.stringify(
                 params,
                 null,
