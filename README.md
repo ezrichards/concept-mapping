@@ -2,9 +2,8 @@
 
 When I learn, I sometimes find it hard to think about and fully
 understand a topic without seeing the larger picture and/or the 
-real-world application of the topic.
-
-This project has three main objectives which aim to solve that problem (and more!):
+real-world application of the topic. This project has three main
+objectives which aim to solve that problem (and more!):
 
 1. Provide a framework for defining abstractions and key ideas in
 a curriculum.
@@ -43,9 +42,8 @@ is `ofFeature` Conditionals.
 another topic.
 
 ## Roadmap
-- Figure out best RDF storage + query libraries
+- Figure out best RDF storage
 - Student end: checkmark certain things that need to be studied, and other things that have been finished.
-- Teacher creation of abstraction predicates (i.e. math theorems)
 - Add real-world applications relations (grayed out, but can be toggled for highlight)
 - Dijkstra's or other least-search algorithm: what do you have to understand to understand an entire Feature?
 - Toggleable "Feature" display: toggle whether or not the mapping goes "towards" Features or "away" from Features
