@@ -2,5 +2,21 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 
+# properly host this somewhere, github pages won't do it
 @prefix sequence: <https://ezrichards.github.io/schema/Sequence#> .
 
+<https://ezrichards.github.io/schema/Sequence#> a owl:Ontology ;
+    rdfs:label "Sequence" ;
+    rdfs:seeAlso <https://github.com/ezrichards/concept-mapping> .
+
+sequence:root a rdf:Property ;
+	rdfs:label "root" ;
+	rdfs:comment "The root or most general element of a learning sequence." .
+
+sequence:hasRelation a rdf:Property ;
+	rdfs:label "hasRelation" ;
+	rdfs:comment "Representing a subject that has a relation to an object, but not a Feature." .
+
+sequence:featureOf a rdf:Property ;
+	rdfs:label "featureOf" ;
+	rdfs:comment "Representing a subject that is a Feature of an object." .

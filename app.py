@@ -70,3 +70,17 @@ if __name__ == "__main__":
     app.run("0.0.0.0")
 
 # read from https://github.com/RDFLib/rdflib
+# https://rdflib.readthedocs.io/en/stable/namespaces_and_bindings.html
+# https://stackoverflow.com/questions/28503628/force-rdflib-to-define-a-namespace
+
+# from rdflib import Graph, URIRef, Literal, BNode
+# from rdflib.namespace import FOAF, OWL, RDF, RDFS
+
+# g = Graph()
+# g.parse('https://www.w3.org/2000/01/rdf-schema#')
+# for s, p, o in g:
+#     print(s, p, o)
+
+# g = Graph()
+# g.add((URIRef("http://example.org/people/Bob"), RDF.type, Literal("person")))
+# print(g.serialize(format="turtle"))
