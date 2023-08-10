@@ -118,7 +118,6 @@ if __name__ == "__main__":
 # https://rdflib.readthedocs.io/en/stable/namespaces_and_bindings.html
 # https://stackoverflow.com/questions/28503628/force-rdflib-to-define-a-namespace
 
-# from rdflib import Graph, URIRef, Literal, BNode
 # from rdflib.namespace import FOAF, OWL, RDF, RDFS
 
 # g = Graph()
