@@ -29,7 +29,14 @@
 
         let container = document.getElementById("network");
         let data = { nodes: nodes, edges: edges };
-        let options = { layout: { randomSeed: 1 } };
+        let options = {     
+            layout: { 
+                randomSeed: 1,
+                hierarchical: {
+                  direction: 'UD',
+                },
+            } 
+        };
         let network = new vis.Network(container, data, options);
 
         network.on("click", function (params) {

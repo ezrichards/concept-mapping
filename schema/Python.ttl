@@ -15,7 +15,43 @@ python:While a sequence:Feature .
 
 python:For a sequence:Feature .
 
+python:Boolean_Logic a sequence:Feature ;
+    sequence:featureOf python:Python .
+
+python:For_In a sequence:Feature ;
+    sequence:hasRelation python:For .
+
+python:For_Incremental a sequence:Feature ;
+    sequence:hasRelation python:For .
+
 python:Loops a sequence:Feature ;
     sequence:featureOf python:Iteration ;
     sequence:hasRelation python:While ;
     sequence:hasRelation python:For .
+
+python:Conditionals a sequence:Feature ;
+    sequence:featureOf python:Python ;
+    sequence:hasRelation python:if ;
+    sequence:hasRelation python:elif ;
+    sequence:hasRelation python:else .
+
+python:if a sequence:Feature .
+
+python:elif a sequence:Feature .
+
+python:else a sequence:Feature .
+
+python:Data_Structures a sequence:Feature ;
+    sequence:featureOf python:Python .
+
+python:Lists a sequence:Feature ;
+    sequence:featureOf python:Data_Structures .
+
+python:Sets a sequence:Feature ;
+    sequence:featureOf python:Data_Structures .
+
+python:Dictionaries a sequence:Feature ;
+    sequence:featureOf python:Data_Structures .
+
+python:Tuples a sequence:Feature ;
+    sequence:featureOf python:Data_Structures .
